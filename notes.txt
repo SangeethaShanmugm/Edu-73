@@ -1,0 +1,82 @@
+install
+---------
+
+https://code.visualstudio.com/download - vs code install
+https://github.com/ - github - create account
+https://nodejs.org/en/ - install
+https://git-scm.com/downloads - install
+https://github.com/SangeethaShanmugm?tab=repositories  - follow
+https://www.linkedin.com/ - linkedin - create account
+https://www.netlify.com/ - create account(using github)
+
+
+
+To set your global username/email configuration:
+Open the command line.
+Set your username: git config --global user.name "FIRST_NAME LAST_NAME"
+Set your email address: git config --global user.email "MY_NAME@example.com"
+
+
+vs code extension
+------------------
+
+spell check
+eslint
+gitlens
+githistory
+vscode-icons
+live server - must
+Tabnine
+
+skills
+--------
+
+Frontend - 1 (website)
+----------------------
+HTML - raw structure - static
+CSS - look and feel(Design) - static
+Bootstrap
+Javascript - dynamic
+
+Frontend - 2 (web apps)
+------------------------
+React 
+
+Backend
+--------
+Node js
+mongodb
+
+MERN - mongodb express react nodejs
+MEAN - mongodb express angular nodejs
+
+framework & library
+angular & react
+
+
+HTML
+--------
+
+shift + 1 => html template 
+
+heading tags
+--------------
+
+h1 --- h6
+opening -----closing
+<tagname>content</tagname>
+element
+
+
+html structure
+-------------
+
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+<h1>Heading </h1>
+<p>paragraph</p>
+</body>
+</html>
