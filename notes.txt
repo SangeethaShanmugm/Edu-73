@@ -80,3 +80,23 @@ html structure
 <p>paragraph</p>
 </body>
 </html>
+
+
+
+excellent  - counted
+good , average, bad - negative feedback
+
+tue, thu - 7 - 8pm
+
+
+Formatting tags
+-----------------
+<b> - bold text
+<strong> - important text 
+<i>  - italic
+<em> - emphasized text
+<small> - smaller text
+<sub>  - subscripted 
+<sup> - superscripted
+<del> - deleted text
+<mark> - highlight
