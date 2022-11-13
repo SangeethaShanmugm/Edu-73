@@ -100,3 +100,16 @@ Formatting tags
 <sup> - superscripted
 <del> - deleted text
 <mark> - highlight
+
+Block Level
+------------
+> starts with new line 
+> Take whole width of screen
+> Eg - p div section hr
+
+Inline Level
+-------------
+> start in the same line
+> Only take space which is required
+> Eg span img a
+
