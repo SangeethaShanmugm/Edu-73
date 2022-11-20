@@ -113,3 +113,21 @@ Inline Level
 > Only take space which is required
 > Eg span img a
 
+
+CSS - Cascading Style sheet
+------------------------------
+
+3 ways to define CSS
+--------------------------
+1. inline - style="color: white;  text-align: center; background-color: dodgerblue ;" => style attribute inside HTML element
+2. Internal Styling  - <style> element in <head> tag
+<style>
+body{
+    background-color: "red";
+    }
+    h1{
+        color: "green"
+    }
+</style>
+3. External CSS - <link> element to link external css file
+ <link rel="stylesheet" href="style.css">

@@ -1,0 +1,21 @@
+table {
+    width: 100%;
+    border-spacing: 10px;
+}
+table, th, td {
+    
+    border: 1px solid black;
+    border-radius: 10px;
+    border-color: red;
+    /* border-style: none; */
+    /* border-collapse: collapse; */
+}
+th, td {
+    background-color: beige;
+    text-align: left;
+    padding: 5px;
+    /* padding-top: 10px;
+    padding-bottom: 30px;
+    padding-right: 50px;
+    padding-left: 100px; */
+}
