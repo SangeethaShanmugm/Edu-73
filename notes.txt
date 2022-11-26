@@ -131,3 +131,14 @@ body{
 </style>
 3. External CSS - <link> element to link external css file
  <link rel="stylesheet" href="style.css">
+
+
+
+<!-- display - none, block  --> - will not occupy space
+<!-- visibility - none, hidden --> It will occupy the space
+
+display: none and visibility: hidden difference?
+--------------------------------------------------
+
+display: none - will not occupy space
+visibility: hidden -  will occupy the space
