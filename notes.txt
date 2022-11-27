@@ -142,3 +142,14 @@ display: none and visibility: hidden difference?
 
 display: none - will not occupy space
 visibility: hidden -  will occupy the space
+
+
+display: block - text will be visible
+visibility: none - text will be visible
+
+CSS Selector
+-------------
+
+class - .(dot) - group of element
+id  = #(hash)  -  unique element
+

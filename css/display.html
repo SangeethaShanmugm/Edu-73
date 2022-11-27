@@ -1,28 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Display property</title>
+    <link href="display.css" rel="stylesheet" />
     <style>
-        span {
-            /* display: block; */
-        }
-        div {
-            display: inline;
-        }
-        p {
-            visibility: hidden;
-            color: red;
-        }
+      span.display1 {
+        display: inline;
+        width: 300px;
+        height: 200px;
+        padding: 20px;
+        border: 1px solid blue;
+        background-color: pink;
+      }
+      span.display2 {
+        display: block;
+        width: 300px;
+        height: 200px;
+        padding: 20px;
+        border: 1px solid blue;
+        background-color: pink;
+      }
+      span.display3 {
+        display: inline-block;
+        width: 300px;
+        height: 200px;
+        padding: 20px;
+        border: 1px solid blue;
+        background-color: pink;
+      }
     </style>
-</head>
-<body>
-   <span>Display example </span> 
-   <span>Display example1 </span> 
-   <div>This is div element</div>
-   <p>This is an example for display none and block</p>
-   <div>This is div element</div>
-</body>
+  </head>
+  <body>
+    <h1>inline</h1>
+    <div>
+      Delhi (also called Delhi) is the capital of India's southern Mumbai state.
+      The center of India's high-tech industry, the city is also known for its
+      parks and nightlife.
+      <span class="display1"
+        >By Cubbon Park, Vidhana Soudha is a Neo-Dravidian legislative
+        building.</span
+      ><span class="display1"
+        >By Cubbon Park, Vidhana Soudha is a Neo-Dravidian legislative
+        building.</span
+      >
+    </div>
+    <h1>block</h1>
+    <div class="display2">
+      Delhi (also called Delhi) is the capital of India's southern Mumbai state.
+      The center of India's high-tech industry, the city is also known for its
+      parks and nightlife. By Cubbon Park, Vidhana Soudha is a Neo-Dravidian
+      legislative building.
+      <span class="display2"
+        >By Cubbon Park, Vidhana Soudha is a Neo-Dravidian legislative
+        building.</span
+      >
+      <span class="display2"
+        >By Cubbon Park, Vidhana Soudha is a Neo-Dravidian legislative
+        building.</span
+      >
+    </div>
+    <h1>inline-block</h1>
+    <div class="display3">
+      Delhi (also called Delhi) is the capital of India's southern Mumbai state.
+      The center of India's high-tech industry, the city is also known for its
+      parks and nightlife. By Cubbon Park, Vidhana Soudha is a Neo-Dravidian
+      legislative building.<span class="display3"
+        >By Cubbon Park, Vidhana Soudha is a Neo-Dravidian legislative
+        building.</span
+      ><span class="display3"
+        >By Cubbon Park, Vidhana Soudha is a Neo-Dravidian legislative
+        building.</span
+      >
+    </div>
+
+    <div>
+      <h1>block example</h1>
+      <div class="main-block">
+        <div class="inline-block">
+            <p>Inline Block</p>
+        </div>
+
+        <div class="inline-block">
+            <p>Inline Block</p>
+        </div>
+
+
+        <div class="inline-block">
+            <p>Inline Block</p>
+        </div>
+
+
+      </div>
+    </div>
+  </body>
 </html>
