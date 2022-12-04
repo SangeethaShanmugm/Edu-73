@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex</title>
+    <style>
+      .flex-container {
+        display: flex;
+        /* height: 500px; */
+        background-color: lightblue;
+        /* flex-direction: row;
+        flex-wrap: wrap-reverse; */
+        /* flex-flow: row wrap; */
+        /* align-content: space-between; */
+        /* justify-content: space-between; */
+        align-items: stretch;
+      }
+      .flex-container > div {
+        background-color: pink;
+        font-size: 30px;
+        width: 100px;
+        text-align: center;
+        margin: 20px;
+        padding: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div>1</div>
+      <div>2</div>
+      <div style="flex-basic: 100px">3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+    </div>
+  </body>
+</html>

@@ -153,3 +153,26 @@ CSS Selector
 class - .(dot) - group of element
 id  = #(hash)  -  unique element
 
+
+Post Form data
+--------------
+1. form -> add method and action
+2. create data.json - add the below
+{
+    "employee" : []
+}
+3. copy and paste in terminal - npx json-server --watch data.json --port 7600
+
+JSON -> Javascript object notation - [{ "key": "value"},{ "key": "value"}]
+object - { key: "value"}
+array - [1,2,3,5,] 
+
+
+Grid 
+-----
+Two dimensional layout - both rows and columns
+
+Flex
+-----
+
+One dimensional layout - either rows or columns

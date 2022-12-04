@@ -1,0 +1,24 @@
+{
+  "employee": [
+    {
+      "fullname": "Sangeetha ",
+      "email": "hello@gmail.com",
+      "password": "123456",
+      "gender": "female",
+      "preferences": [
+        "on",
+        "on",
+        "on"
+      ],
+      "id": 1
+    },
+    {
+      "fullname": "hello",
+      "email": "123@gmail.com",
+      "password": "123",
+      "gender": "male",
+      "preferences": "on",
+      "id": 2
+    }
+  ]
+}
