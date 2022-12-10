@@ -1,0 +1,26 @@
+.flex-container {
+    display: flex;
+
+    flex-direction: row;
+    /* text-align: center; */
+    font-size: 35px;
+}
+
+.flex-item-left {
+    flex: 50%;
+    background-color: tomato;
+    padding: 10px;
+}
+
+.flex-item-right {
+    flex: 50%;
+    background-color: pink;
+    padding: 10px;
+}
+
+@media (max-width: 800px) {
+
+    .flex-container {
+        flex-direction: column;
+    }
+}
