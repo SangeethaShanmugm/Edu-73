@@ -176,3 +176,35 @@ Flex
 -----
 
 One dimensional layout - either rows or columns
+
+Bootstrap
+-------------
+
+Bootstrap is a frontend framework - easy and faster
+templates - forms, button, cards, media, table, image carousals
+
+Advantages
+-----------
+Easy to use
+Responsive
+Mobile-first approach
+Browser compatibility
+
+
+CDN 
+----
+
+<link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+
+   container - element with contents - fixed width container
+   container-fluid - full width container
+
+mr - margin right
+mt -margin top
+mb - margin bottom
+ml - margin left
