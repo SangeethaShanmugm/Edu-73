@@ -208,3 +208,50 @@ mr - margin right
 mt -margin top
 mb - margin bottom
 ml - margin left
+
+
+Bootstrap3
+-------------
+
+768px < xs
+768px > sm
+992px > md
+1200px >lg
+
+Bootstrap4
+-----------
+
+576px < col-
+576px > sm
+768px > md
+992px > lg
+1200px > xl
+
+Bootstrap5
+------------
+576px < col-
+576px > sm
+768px > md
+992px > lg
+1200px > xl
+1400px > xxl
+
+
+
+Bootstrap font icon
+----------------------
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+
+Javascript
+-------------
+Ecma script5
+Ecma script6
+es5
+es6
+
+string + string  = string
+string + number  = string
+number + string = string
+number + number = number
