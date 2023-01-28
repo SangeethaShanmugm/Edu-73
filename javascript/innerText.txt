@@ -1,0 +1,34 @@
+The following is an <p>example</p>of HTML
+
+The following is an example of HTML
+
+innerText - return content inside the element
+span.innerText = "<p>This is p</p>"
+output => <p>This is p</p>
+
+
+
+innerHTML => it parse the element along with content
+span.innerText = "<p>This is p</p>"
+output => This is p 
+<span>
+<p>
+
+</p>
+</span>
+
+
+var span = document.createElement('span')
+span.innerHTML="this is p"
+span.style.color ="red"
+
+var p = document.createElement('p')
+p.innerHTML="this is p"
+p.style.color ="red"
+span.append(p)
+
+
+output => 
+<span style="color:red">
+<p>this is p</p>
+</span>
