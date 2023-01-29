@@ -84,4 +84,69 @@ city.charAt(0).toUpperCase() + city.slice(1).toLowerCase();
 "P" + "aris";
 ("Paris");
 
+var uname = "Kalyani";
+// k   a    l   y    a     n     i
+// 1   2    3    4    5    6     7
+uname.length;
+7;
 
+var uname = "  Kalyani .  ";
+uname.length;
+13;
+uname.trim();
+("Kalyani.");
+
+var a = "I am learning Javascript";
+a.replace("Javascript", "JS");
+("I am learning JS");
+
+var a = "JavaScript I am learning Javascript";
+a.replace("Javascript", "JS");
+("JavaScript I am learning JS");
+
+a.replace("JavaScript", "JS");
+("JS I am learning Javascript");
+
+var a = "JS I am learning Javascript";
+a.replace(/JavaScript/g, "JS");
+("JS I am learning JS");
+
+var uname = "  Kalyani .  ";
+console.log(uname.replaceAll(" ", "/"));
+//Kalyani/.//
+
+//replaceAll(pattern, replacement)
+
+const string = "Hello everyone Hi hi";
+let pattern = "hi";
+let replacement = "hey";
+let new_string = string.replaceAll(pattern, replacement);
+
+console.log(new_string);
+// /Hello everyone hey hey
+
+const a1 = "Hello Everyone good good day";
+console.log(a1.replace(/good/g, "?"));
+//Hello Everyone ? ? day
+
+var a = "https://github.com/SangeethaShanmugm/Edu-73";
+console.log(a.split("/"));
+// a.split("/")[5][("https:", "", "github.com", "SangeethaShanmugm", "Edu-73")];
+
+var b = "https://github.com/SangeethaShanmugm?tab=repositories";
+console.log(b.split("/"));
+(4)[("https:", "", "github.com", "SangeethaShanmugm?tab=repositories")];
+console.log(b.split("?"));
+(2)[("https://github.com/SangeethaShanmugm", "tab=repositories")];
+
+var a = "JavaScript";
+console.log(a.split(""));
+a.split("");
+(10)[("J", "a", "v", "a", "S", "c", "r", "i", "p", "t")];
+var b = ["J", "a", "v", "a", "S", "c", "r", "i", "p", "t"];
+console.log(b.toString());
+("J,a,v,a,S,c,r,i,p,t");
+("JavaScript");
+
+console.log(b.toString().replaceAll(",", ""));
+("JavaScript");
