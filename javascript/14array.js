@@ -101,23 +101,98 @@ a.slice(2, 5);
 console.log(a.slice(0, -2));
 // (6) ['Dubai', 'Delhi', 'Mumbai', 'Helsinki', 'London', 'Amsterdam']
 
+splice(startIndex, DeleteCount, values);
 
-splice(startIndex, DeleteCount, values)
-
-var a  = ["Dubai","Delhi", "Mumbai", "Helsinki", "London", "Amsterdam", "Boston", "Venice"]
+var a = [
+  "Dubai",
+  "Delhi",
+  "Mumbai",
+  "Helsinki",
+  "London",
+  "Amsterdam",
+  "Boston",
+  "Venice",
+];
 //          0      1         2         3          4            5          6          7
 
 //remove 2 values from index 2
-a.splice(2, 2)
+a.splice(2, 2);
 //["Mumbai", "Helsinki"]
 // ["Dubai","Delhi", "London", "Amsterdam", "Boston", "Venice"]
 
-
 //remove 0 values but add 2 values on index 3
-a.splice(3, 0, 'Pune', 'Paris')
+a.splice(3, 0, "Pune", "Paris");
 //["Dubai","Delhi", "London", 'Pune', 'Paris',"Amsterdam", "Boston", "Venice"]
 
-
 //remove 1 value on index 1 and add 2 values
-a.splice(1,1,"Innsburg", 'France')
+a.splice(1, 1, "Innsburg", "France");
 //["Dubai","Innsburg", 'France', "London", 'Pune', 'Paris',"Amsterdam", "Boston", "Venice"]
+
+// indexOf
+
+var a = [
+  "Dubai",
+  "Innsburg",
+  "France",
+  "London",
+  "Pune",
+  "Paris",
+  "Amsterdam",
+  "Boston",
+  "Venice",
+];
+//          0        1           2          3        4        5       6          7            8
+a.indexOf("London");
+3;
+a.indexOf("Dubai");
+0;
+a.indexOf("Amsterdam");
+6;
+a.indexOf("Venice");
+8;
+
+var c = ["a", "b", "c", 1];
+
+var b = [2, "d", "e", "f"];
+
+c + b;
+// [("a", "b", "c", 1)] + [2, "d", "e", "f"]
+//[("a", "b", "c", "12", "d", "e", "f")];
+//a, b, c, 12, d, e, f;
+
+c.concat(b)(8)[("a", "b", "c", "1", "2", "d", "e", "f")];
+
+b.concat(c)(8)[(2, "d", "e", "f", "a", "b", "c", 1)];
+
+var name = "Mickenzie";
+
+var b = [1, 2, 3];
+
+Array.isArray(name);
+false;
+Array.isArray(b);
+true;
+
+var city = ["Dubai","Innsburg", 'France', "London", 'Pune']
+var city = ["Dubai","Innsburg", 'France', ['Red',[1,2,3],'Yellow', 'Orange'],"Amsterdam", "Boston"]
+//            0        1            2                    3                        4            5         
+city[0]
+"Dubai"
+city[2]
+'France'
+city[3]
+(4)['Red',[1,2,3],'Yellow', 'Orange']
+//   0        1       2          3
+city[3][0]
+//'Red'
+city[3][2]
+'Yellow'
+city[3][1]
+  [1,  2,   3]
+// 0   1    2 
+city[3][1][0]
+1
+city[3][1][1]
+2
+city[3][1][2]
+3
