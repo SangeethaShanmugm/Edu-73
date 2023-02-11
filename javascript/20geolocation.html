@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onClick="geolocation()">Geolocation</button>
+    <p id="out"></p>
+    <p id="location"></p>
+    <p id="weather"></p>
+    <script>
+      let x = document.getElementById("out");
+      let y = document.getElementById("location");
+      let z = document.getElementById("weather");
+      function geolocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+          x.innerText = "Geo Not Supported";
+        }
+      }
+
+      function showPosition(data) {
+        console.log(data);
+        let lat = data.coords.latitude;
+        let long = data.coords.longitude;
+        x.innerText = `Lat is ${lat} & long is ${long}`;
+        const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=a764710199b4aa019c290680e78b0bf3`;
+        //api calling
+        fetch(url, { method: "GET" })
+          //return promise
+          .then((res) => res.json())
+          //resolve the promise
+          .then((data) => {
+            y.innerText = `Temp of day is ${data.main.temp}`;
+            z.innerText = `Your city is ${data.name}`;
+          });
+      }
+    </script>
+  </body>
+</html>

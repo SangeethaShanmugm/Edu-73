@@ -255,3 +255,11 @@ string + string  = string
 string + number  = string
 number + string = string
 number + number = number
+
+json - javascript object notation
+"key" : "value"
+
+object =>  json  => prettier-code formatter extension
+right click => format doc with -> prettier - we get json structure
+
+callback function - func inside another func
