@@ -271,3 +271,6 @@ OpenWeather API
 https://api.openweathermap.org/data/2.5/forecast/daily?lat=10.9820963&lon=76.9988557&mode=json&units=metric&cnt=5&appid=fbf712a5a83d7305c3cda4ca8fe7ef29
 
 https://api.openweathermap.org/data/2.5/weather?lat=28.6107926&lon=77.3106997&appid=a764710199b4aa019c290680e78b0bf3
+
+
+Hoisting - is a behaviour in which a func or var can be accessed / used before declaration
