@@ -1,0 +1,1 @@
+export default const text =  "Happy Day"

@@ -23,20 +23,44 @@ dbObj.calc = {
 // module.exports = dbObj;
 
 //es6
-// export default dbObj; //default export
+ export default dbObj; //default export
 
 //2 types -  import and export
 // 1. named import and export - prefered
 // 2. default import and export
 
-const double = () => {
-  return a * 2;
-};
+// const double = () => {
+//   return a * 2;
+// };
 
-// export { dbObj }; // named export
+// // export { dbObj }; // named export
 
-const msg = () => {
-  console.log("Hello Everyone");
-};
+// const msg = () => {
+//   console.log("Hello Everyone");
+// };
 
-export { msg, double };
+// export { msg, double };
+
+
+
+
+//es5 
+// first -export 
+// second - import 
+
+const welcome = "Hello"
+
+module.exports = welcome //es5
+
+
+//es6 named export 
+ 
+ export const welcome = "Hello"
+
+ export const text =  "Happy Day"
+
+ //es6 default export 
+
+ export default const welcome = "Hello"
+
+ 
