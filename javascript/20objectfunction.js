@@ -23,16 +23,15 @@ function language(name, country) {
   };
 }
 
-var Hindi = new language('Hindi', 'India')
+var Hindi = new language("Hindi", "India");
 
-language(name: 'Hindi', country: 'India', greet: f)
-Hindi.greet()
-'Say HI to Hindi'
+//language(name: 'Hindi', country: 'India', greet: f)
+Hindi.greet();
+("Say HI to Hindi");
 
-
-var English = new language('English', 'England')  
-language(name: 'English', country: 'England',greet: f )
-English.country
-'England'
-English.name
-'English'
+var English = new language("English", "England");
+//language(name: 'English', country: 'England',greet: f )
+English.country;
+("England");
+English.name;
+("English");
