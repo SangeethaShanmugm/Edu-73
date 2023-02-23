@@ -30,7 +30,7 @@ Hindi.greet()
 'Say HI to Hindi'
 
 
-var English = new language('English', 'England')
+var English = new language('English', 'England')  
 language(name: 'English', country: 'England',greet: f )
 English.country
 'England'
