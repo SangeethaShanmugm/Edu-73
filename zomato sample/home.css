@@ -79,38 +79,35 @@ select {
 #quickSearch {
     width: 80%;
     display: inline-block;
+    margin-left: 5%;
+    margin-top: 2%;
 }
 
-#quickheading {
-    top: 528px;
-    left: 113px;
-    width: 239px;
-    height: 43px;
-    text-align: left;
-    font: normal normal bold 30px/46px Poppins;
-    letter-spacing: 0px;
+#quickHeading {
+    margin-left: 2%;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
     color: #192F60;
-    opacity: 1;
     display: block;
 }
 
+#quickHeading:hover {
+    font-size: 50px;
+}
+
 #quicksubHeading {
-    top: 578px;
-    left: 113px;
-    width: 331px;
-    height: 25px;
     text-align: left;
-    font: normal normal normal 18px/27px Poppins;
-    letter-spacing: 0px;
     color: #8C96AB;
-    opacity: 1;
+    font-size: 18px;
+    margin-left: 2%;
 }
 
 .tileContainer {
     float: left;
     width: 30%;
     height: 150px;
-    box-shadow: 10px 20px 15px;
+    box-shadow: 10px 20px 15px rgb(70, 68, 68);
     margin-left: 5%;
     margin-top: 5%;
 }
@@ -118,4 +115,62 @@ select {
 
 .tileItem1 {
     float: left;
+}
+
+.tileItem1>img {
+    width: 150px;
+    height: 150px
+}
+
+.tileItem2 {
+    float: left;
+    width: 50%;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.tileheading {
+    font-size: 20px;
+    color: #192F60;
+}
+
+.tilesubHeading {
+    font-size: 16px;
+    float: left;
+    margin-left: 45%;
+    margin-top: -25%;
+}
+
+/* Footer */
+
+footer {
+    height: 150px;
+    text-align: center;
+    background-color: #3b2632;
+    color: #fff
+}
+
+ul {
+    list-style: none
+}
+
+.fotDiv {
+    width: 30%;
+    float: left;
+    border-right: 2px solid white
+}
+
+.noborder {
+    border: none;
+}
+
+#fotsocial {
+    float: right;
+    margin-top: -4%;
+
+}
+
+#fotsocial .fa-brands {
+    font-size: 35px;
+    color: red;
 }
