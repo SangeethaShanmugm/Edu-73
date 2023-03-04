@@ -274,3 +274,37 @@ https://api.openweathermap.org/data/2.5/weather?lat=28.6107926&lon=77.3106997&ap
 
 
 Hoisting - is a behaviour in which a func or var can be accessed / used before declaration
+
+
+Node js
+----------
+
+Single Threaded Asynchronous Non Block input/output
+
+Node Js does not require ay Server to compile
+
+NodeJs Inbuilt Packages
+>> File System
+>> Operating System
+>> HTTP
+
+
+Package.json
+------------
+
+> starting point to the app
+> it contains all the package we require
+> it also contains the script to run the app
+> Meta Data(description about the app)
+
+
+Steps to generate package.json
+-------------------------------
+
+> Node js must be installed in laptop
+> Go inside the folder where you want the node app / go inside folder using cmd
+> npm init   => initialization
+> Answer all the question - just click enter
+> Type "yes"
+
+
