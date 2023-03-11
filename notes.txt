@@ -308,3 +308,51 @@ Steps to generate package.json
 > Type "yes"
 
 
+mongodb
+-----------
+
+cmd -
+1. mongo --version 
+2. mongo  - open shell
+3. mongod - to kickstart mongo server
+
+
+
+show dbs - show all dbs in mongodb
+use dbName - switch to dbName
+db - currently/lastly which db you have worked
+
+
+
+2 types of dbs
+-----------
+
+relational database - mySQl, SQl, oracle- table =>  coluns & rows
+non relational database - mongodb, couch db, graphql, postgres 
+
+mongodb -  bson structure
+
+obj =>  {k: "v"}
+
+json  => {"k":"v"}
+
+bson- binary json
+mongodb store data in bson format but retrieve in json format
+
+Schema -  structure of data or blueprint of data 
+[
+{
+    name:"peter",
+    age:20
+},
+{
+    name:"jack",
+    age:25,
+    score: 90,
+},
+]
+
+replaceOne(name:"peter)
+
+object - document
+table - collection
