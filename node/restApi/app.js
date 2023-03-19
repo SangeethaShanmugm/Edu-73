@@ -1,8 +1,14 @@
 const express = require("express");
 const mongo = require("mongodb");
 const MongoClient = mongo.MongoClient;
+const bodyParser = require("body-parser");
 const app = express();
 const PORT = 5000;
+
+//middleware
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 const MONGO_URL = "mongodb://localhost:27017";
 
@@ -90,6 +96,102 @@ app.get("/filter/:mealId", function (req, res) {
       if (err) throw err;
       res.send(result);
     });
+});
+
+//restaurant details
+
+app.get("/details/:id", function (req, res) {
+  // let id = mongo.ObjectId(req.params.id);
+  let id = Number(req.params.id);
+  db.collection("zomato")
+    .find({ restaurant_id: id })
+    .toArray((err, result) => {
+      if (err) throw err;
+      res.send(result);
+    });
+});
+
+//meals details for restaurant
+
+app.get("/menu/:id", function (req, res) {
+  let id = Number(req.params.id);
+  db.collection("menu")
+    .find({ restaurant_id: id })
+    .toArray((err, result) => {
+      if (err) throw err;
+      res.send(result);
+    });
+});
+
+//place order
+
+app.post("/placeorder", function (req, res) {
+  console.log(req.body);
+  db.collection("orders").insert(req.body, (err, result) => {
+    if (err) throw err;
+    res.send("Order Placed");
+  });
+});
+
+//Menu Details
+
+app.post("/menuItem", function (req, res) {
+  if (Array.isArray(req.body.id)) {
+    db.collection("menu")
+      .find({ menu_id: { $in: req.body.id } })
+      .toArray((err, result) => {
+        if (err) throw err;
+        res.send(result);
+      });
+  } else {
+    res.send("Invalid input");
+  }
+});
+
+//list of orders
+
+app.get("/orders", function (req, res) {
+  let query = {};
+  let email = req.query.email;
+  if (email) {
+    query = { email };
+  }
+  db.collection("orders")
+    .find(query)
+    .toArray((err, result) => {
+      if (err) throw err;
+      res.send(result);
+    });
+});
+
+//update Order
+
+app.put("/updateOrder/:id", function (req, res) {
+  let oid = req.params.id;
+  db.collection("orders").updateOne(
+    { id: oid },
+    {
+      $set: {
+        status: req.body.status,
+        bank_name: req.body.bank_name,
+        date: req.body.date,
+      },
+    },
+    (err, result) => {
+      if (err) throw err;
+      res.send("Order updated");
+    }
+  );
+});
+
+//delete orders
+
+app.delete("/deleteOrder/:id", function (req, res) {
+  let _id = mongo.ObjectId(req.params.id);
+  db.collection("orders").deleteOne({ _id }, (err, result) => {
+    if (err) throw err;
+    res.send("Order Deleted");
+  });
 });
 
 //Mongodb connection
