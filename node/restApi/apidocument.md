@@ -53,6 +53,19 @@ List of orders wrt to email
 http://localhost:5000/orders?email=john@gmail.com
 
 update payment details (PUT)
+http://localhost:5000/updateOrder/2
+
+{
+"status":"Pending",
+"bank_name":"SBI" ,
+"date": "19/03/2023"
+}
 
 delete orders (DELETE)
 http://localhost:5000/deleteOrder/641714c9c92db0db3b9f8677
+
+CRUD
+C - Create - POST
+R - Read - GET
+U - Update - PUT
+D - Delete - DELETE
