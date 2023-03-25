@@ -167,9 +167,9 @@ app.get("/orders", function (req, res) {
 //update Order
 
 app.put("/updateOrder/:id", function (req, res) {
-  let oid = req.params.id;
+  let oid = Number(req.params.id);
   db.collection("orders").updateOne(
-    { id: oid },
+    { orderId: oid },
     {
       $set: {
         status: req.body.status,
