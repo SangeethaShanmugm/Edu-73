@@ -3,14 +3,16 @@ const mongo = require("mongodb");
 const MongoClient = mongo.MongoClient;
 const bodyParser = require("body-parser");
 const app = express();
-const PORT = 5000;
-
+const PORT = process.env.PORT;
+const dotenv = require("dotenv");
+dotenv.config();
+let db;
 //middleware
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
-const MONGO_URL = "mongodb://localhost:27017";
+console.log(process.env);
+const MONGO_URL = process.env.MONGO_URL;
 
 //REST API endpoints
 app.get("/", function (req, res) {
