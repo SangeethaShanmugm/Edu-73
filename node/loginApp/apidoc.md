@@ -1,11 +1,11 @@
 ## Get All Users
 
-http://localhost:4000/api/auth/users
+(GET) http://localhost:4000/api/auth/users
 
 ## Register
 
-http://localhost:4000/api/auth/register
-
+(POST) http://localhost:4000/api/auth/register
+(body)
 {
 "name":"jack",
 "email":"jack@gmail.com",
@@ -13,3 +13,14 @@ http://localhost:4000/api/auth/register
 "phone":6543785446,
 "role":"user"
 }
+
+## Login
+
+(POST) http://localhost:5000/api/auth/login
+(body) => { "email":"john@gmail.com", "password":"123456"}
+(response) => {"auth": true,"token": "eyJhb"}
+
+## UserInfo
+
+(GET) http://localhost:5000/api/auth/userInfo
+(Header) => {'x-access-token': 'token value from login }
