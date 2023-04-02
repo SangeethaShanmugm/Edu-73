@@ -1,0 +1,58 @@
+#search {
+
+    height: 400px;
+    background-image: url(../../../image/main.png);
+    background-repeat: no-repeat;
+
+    background-image: url(../../../image/main.png);
+    opacity: 1;
+    background-size: 100% 400px;
+}
+
+#logo {
+
+    width: 150px;
+    height: 150px;
+    margin-left: 46%;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: 5%;
+}
+
+#logo>span {
+    margin-left: 16%;
+    color: red;
+    font-size: 90px;
+
+}
+
+#heading {
+    margin-top: 20%;
+    position: absolute;
+    margin-left: 20%;
+    font: normal normal 600 36px/55px poppins;
+    color: white;
+    letter-spacing: 0px;
+    opacity: 1;
+}
+
+#dropdown {
+    width: 60%;
+    height: 50px;
+    position: absolute;
+    margin-left: 27%;
+    margin-top: 26%;
+
+}
+
+select {
+    height: 50px;
+    width: 40%;
+    font-size: 20px;
+    text-align: center;
+}
+
+#select-style {
+    width: 59%
+}

@@ -3,7 +3,7 @@ const mongo = require("mongodb");
 const MongoClient = mongo.MongoClient;
 const bodyParser = require("body-parser");
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5000;
 const dotenv = require("dotenv");
 dotenv.config();
 let db;
@@ -11,7 +11,7 @@ let db;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-console.log(process.env);
+//console.log(process.env);
 const MONGO_URL = process.env.MONGO_URL;
 
 //REST API endpoints
