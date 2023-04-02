@@ -12,8 +12,38 @@ export default class Search extends Component {
       restaurants: "",
     };
   }
-  renderCity = () => {};
+  renderCity = (data) => {
+    if (data) {
+      return data.map((item) => {
+        return (
+          <option key={item._id} value={item.state_id}>
+            {item.state}
+          </option>
+        );
+      });
+    }
+  };
 
+  renderRest = (data) => {
+    if (data) {
+      return data.map((item) => {
+        return (
+          <option key={item._id} value={item.restaurant_id}>
+            {item.restaurant_name}
+          </option>
+        );
+      });
+    }
+  };
+  handleCity = (event) => {
+    const stateId = event.target.value;
+    fetch(`${rurl}${stateId}`, { method: "GET" })
+      .then((res) => res.json())
+      .then((data) => {
+        this.setState({ restaurants: data });
+        console.log(data);
+      });
+  };
   render() {
     return (
       <div id="search">
@@ -24,16 +54,14 @@ export default class Search extends Component {
           <p>Find the best restaurants, cafés, and bars</p>
         </div>
         <div id="dropdown">
-          <select>
+          <select onChange={this.handleCity}>
             <option>Please type a location</option>
-            <option>Sarjapur Road, Bengaluru</option>
-            <option>HSR Layout, Bengaluru</option>
+            <option>----SELECT CITY----</option>
+            {this.renderCity(this.state.location)}
           </select>
           <select id="select-style">
-            <option>Select Restaurants</option>
-            <option>Empire restaurants</option>
-            <option>CreamStone</option>
-            <option>Punjabi Rasoi</option>
+            <option>----SELECT RESTAURANTS----</option>
+            {this.renderRest(this.state.restaurants)}
           </select>
         </div>
       </div>
@@ -45,6 +73,7 @@ export default class Search extends Component {
     fetch(lurl, { method: "GET" })
       .then((res) => res.json())
       .then((data) => {
+        this.setState({ location: data });
         console.log(data);
       });
   }
