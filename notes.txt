@@ -406,3 +406,5 @@ props
 => props helps to transfer data between nested components
 => We cannot update the value of the props
 
+
+params -  extract data from url
