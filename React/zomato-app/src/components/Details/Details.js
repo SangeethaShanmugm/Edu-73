@@ -3,6 +3,9 @@ import axios from "axios";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import "./details.css";
+import MenuList from "./MenuList";
+import { Link } from "react-router-dom";
+
 const url = "http://localhost:5000";
 export default class Details extends Component {
   constructor() {
@@ -11,9 +14,18 @@ export default class Details extends Component {
       details: "",
       menuList: "",
       mealId: sessionStorage.getItem("mealId"),
+      userItem: "",
     };
   }
 
+  addToCart = (data) => {
+    this.setState({ userItem: data });
+  };
+
+  proceed = () => {
+    sessionStorage.setItem("menu", this.state.userItem);
+    this.props.history.push(`/placeOrder/${this.state.details.restaurant_name}`)
+  };
   render() {
     let { details } = this.state;
     return (
@@ -63,6 +75,25 @@ export default class Details extends Component {
               <p>Contact No. {details.contact_number}</p>
             </TabPanel>
           </Tabs>
+          <div>
+            <Link
+              to={`/listing/${this.state.mealId}`}
+              className="btn btn-danger"
+            >
+              BACK
+            </Link>
+            <button className="btn btn-success" onClick={this.proceed}>
+              Proceed
+            </button>
+          </div>
+          <div>
+            <MenuList
+              menuData={this.state.menuList}
+              finalOrder={(data) => {
+                this.addToCart(data);
+              }}
+            />
+          </div>
         </div>
       </div>
     );

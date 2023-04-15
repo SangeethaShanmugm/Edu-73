@@ -4,6 +4,9 @@ import Header from "./Header";
 import { Home } from "./components/Home/Home";
 import ListingApi from "./components/Listing/ListingApi";
 import Details from "./components/Details/Details";
+import PlaceOrder from "./components/Booking/PlaceOrder";
+import Login from "./components/auth/Login";
+import Register from "./components/auth/Register";
 const Routing = () => {
   return (
     <BrowserRouter>
@@ -12,6 +15,9 @@ const Routing = () => {
         <Route exact path="/" component={Home} />
         <Route path="/listing/:mealId" component={ListingApi} />
         <Route path="/details" component={Details} />
+        <Route path="/placeOrder/:restName" component={PlaceOrder} />
+        <Route path="/login" component={Login} />
+        <Route path="/register" component={Register} />
         <Footer />
       </div>
     </BrowserRouter>
