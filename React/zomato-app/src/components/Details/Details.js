@@ -5,6 +5,7 @@ import "react-tabs/style/react-tabs.css";
 import "./details.css";
 import MenuList from "./MenuList";
 import { Link } from "react-router-dom";
+import Header from "../../Header";
 
 const url = "http://localhost:5000";
 export default class Details extends Component {
@@ -24,78 +25,85 @@ export default class Details extends Component {
 
   proceed = () => {
     sessionStorage.setItem("menu", this.state.userItem);
-    this.props.history.push(`/placeOrder/${this.state.details.restaurant_name}`)
+    this.props.history.push(
+      `/placeOrder/${this.state.details.restaurant_name}`
+    );
   };
   render() {
     let { details } = this.state;
     return (
-      <div id="mainContent">
-        <div className="ImgDiv">
-          <img src={details.restaurant_thumb} alt="rest-pic" />
-        </div>
-        <div className="contentDiv">
-          <h2>{details.restaurant_name}</h2>
-          <span> 250 customers Say {details.rating_text}</span>
-          <h3>
-            <del>Old Price: Rs. 1000</del>
-          </h3>
-          <h3>New Price: Rs. {details.cost}</h3>
-          <h3>Best Taste of Fresh and hot food at your Door Step and DineIn</h3>
-          <div className="feature-container">
-            <figure>
-              <img
-                className="featureIcon"
-                src="https://i.ibb.co/wJvrhYg/veg.png"
-                alt="pureVeg"
+      <>
+        <Header />
+        <div id="mainContent">
+          <div className="ImgDiv">
+            <img src={details.restaurant_thumb} alt="rest-pic" />
+          </div>
+          <div className="contentDiv">
+            <h2>{details.restaurant_name}</h2>
+            <span> 250 customers Say {details.rating_text}</span>
+            <h3>
+              <del>Old Price: Rs. 1000</del>
+            </h3>
+            <h3>New Price: Rs. {details.cost}</h3>
+            <h3>
+              Best Taste of Fresh and hot food at your Door Step and DineIn
+            </h3>
+            <div className="feature-container">
+              <figure>
+                <img
+                  className="featureIcon"
+                  src="https://i.ibb.co/wJvrhYg/veg.png"
+                  alt="pureVeg"
+                />
+                <figcaption>Pure Veg</figcaption>
+              </figure>
+              <figure>
+                <img
+                  class="featureIcon"
+                  src="https://i.ibb.co/mD3jpgc/sentizied.png"
+                  alt="sanitized"
+                />
+                <figcaption>Fully Sanitized</figcaption>
+              </figure>
+            </div>
+            <Tabs>
+              <TabList>
+                <Tab>About Us</Tab>
+                <Tab>Contact Us</Tab>
+              </TabList>
+              <TabPanel>
+                <p>
+                  {details.restaurant_name} with rating as{" "}
+                  {details.average_rating}
+                </p>
+              </TabPanel>
+              <TabPanel>
+                <h3>{details.address}</h3>
+                <p>Contact No. {details.contact_number}</p>
+              </TabPanel>
+            </Tabs>
+            <div>
+              <Link
+                to={`/listing/${this.state.mealId}`}
+                className="btn btn-danger"
+              >
+                BACK
+              </Link>
+              <button className="btn btn-success" onClick={this.proceed}>
+                Proceed
+              </button>
+            </div>
+            <div>
+              <MenuList
+                menuData={this.state.menuList}
+                finalOrder={(data) => {
+                  this.addToCart(data);
+                }}
               />
-              <figcaption>Pure Veg</figcaption>
-            </figure>
-            <figure>
-              <img
-                class="featureIcon"
-                src="https://i.ibb.co/mD3jpgc/sentizied.png"
-                alt="sanitized"
-              />
-              <figcaption>Fully Sanitized</figcaption>
-            </figure>
-          </div>
-          <Tabs>
-            <TabList>
-              <Tab>About Us</Tab>
-              <Tab>Contact Us</Tab>
-            </TabList>
-            <TabPanel>
-              <p>
-                {details.restaurant_name} with rating as{" "}
-                {details.average_rating}
-              </p>
-            </TabPanel>
-            <TabPanel>
-              <h3>{details.address}</h3>
-              <p>Contact No. {details.contact_number}</p>
-            </TabPanel>
-          </Tabs>
-          <div>
-            <Link
-              to={`/listing/${this.state.mealId}`}
-              className="btn btn-danger"
-            >
-              BACK
-            </Link>
-            <button className="btn btn-success" onClick={this.proceed}>
-              Proceed
-            </button>
-          </div>
-          <div>
-            <MenuList
-              menuData={this.state.menuList}
-              finalOrder={(data) => {
-                this.addToCart(data);
-              }}
-            />
+            </div>
           </div>
         </div>
-      </div>
+      </>
     );
   }
 

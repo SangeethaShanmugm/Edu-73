@@ -41,6 +41,7 @@ class Login extends Component {
   render() {
     return (
       <>
+        <Header />
         <div className="container">
           <div className="panel panel-warning">
             <div className="panel-heading">

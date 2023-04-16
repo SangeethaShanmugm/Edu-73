@@ -16,11 +16,11 @@
 
 ## Login
 
-(POST) http://localhost:5000/api/auth/login
+(POST) http://localhost:4000/api/auth/login
 (body) => { "email":"john@gmail.com", "password":"123456"}
 (response) => {"auth": true,"token": "eyJhb"}
 
 ## UserInfo
 
-(GET) http://localhost:5000/api/auth/userInfo
+(GET) http://localhost:4000/api/auth/userInfo
 (Header) => {'x-access-token': 'token value from login }

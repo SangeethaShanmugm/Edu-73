@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Header from "../../Header";
 
 const url = "http://localhost:4000/api/auth/register";
 
@@ -9,8 +10,8 @@ class Register extends Component {
     this.state = {
       name: "sangi",
       email: "sangi@gmail.com",
-      password: 0,
-      phone: 8434567812,
+      password: "123456",
+      phone: "8434567812",
     };
   }
 
@@ -32,6 +33,7 @@ class Register extends Component {
   render() {
     return (
       <>
+        <Header />
         <div className="container">
           <div className="panel panel-info">
             <div className="panel-heading">

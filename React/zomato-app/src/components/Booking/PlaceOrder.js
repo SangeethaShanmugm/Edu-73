@@ -1,8 +1,23 @@
 import React, { Component } from "react";
+import Header from "../../Header";
 
 const url = "http://localhost:5000/menuItem";
 const purl = "http://localhost:5000/placeorder";
 export default class PlaceOrder extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      id: Math.floor(Math.random() * 1000),
+      hotel_name: this.props.match.params.restName,
+      name: "John",
+      email: "john@gmail.com",
+      cost: 0,
+      phone: "6984372328",
+      address: "phot no 35, Delhi",
+      menuItem: "",
+    };
+  }
+
   handleChange = (event) => {
     this.setState({ [event.target.name]: event.target.value });
   };
@@ -21,17 +36,31 @@ export default class PlaceOrder extends Component {
     }
   };
 
+  checkout = () => {
+    let obj = this.state;
+    obj.menuItem = sessionStorage.getItem("menu");
+    fetch(purl, {
+      // 3 steps, method -POST, body, headers -JSON
+      method: "POST",
+      body: JSON.stringify(obj),
+      headers: {
+        accept: "application/json ",
+        "content-type": "application/json",
+      },
+    }).then(console.log("Order Added"));
+  };
+
   render() {
     return (
-      <div>
-        <h2>Login First to Place Booking</h2>
+      <>
+        <Header />
         <div className="container">
           <div className="panel panel-primary">
             <div className="panel-heading">
-              <h3>{this.state.hotel_name}</h3>
+              <h3>Order for {this.state.hotel_name}</h3>
             </div>
             <div className="panel-body">
-              <form>
+              <form action="http://localhost:4200/paynow" method="POST">
                 <div className="row">
                   <input type="hidden" name="cost" value={this.state.cost} />
                   <input type="hidden" name="id" value={this.state.id} />
@@ -89,13 +118,13 @@ export default class PlaceOrder extends Component {
                 {this.renderItem(this.state.menuItem)}
                 <div className="row">
                   <div className="col-md-12">
-                    <h2>Total Price is Rs. {this.state.cost}</h2>
+                    <h2>Total Price is Rs.{this.state.cost}</h2>
                   </div>
                 </div>
                 <button
-                  type="submit"
                   className="btn btn-success"
                   onClick={this.checkout}
+                  type="submit"
                 >
                   Place Order
                 </button>
@@ -103,7 +132,7 @@ export default class PlaceOrder extends Component {
             </div>
           </div>
         </div>
-      </div>
+      </>
     );
   }
 

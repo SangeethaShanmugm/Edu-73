@@ -4,6 +4,7 @@ import ListingDisplay from "./ListingDisplay";
 import "./Listing.css";
 import CuisineFilter from "../Filter/CuisineFilter";
 import CostFilter from "../Filter/CostFilter";
+import Header from "../../Header";
 const url = "http://localhost:5000/restaurants?mealId=";
 
 export default class ListingApi extends Component {
@@ -20,6 +21,7 @@ export default class ListingApi extends Component {
   render() {
     return (
       <div>
+        <Header />
         <div className="row">
           <div id="mainListing">
             <div id="filter">

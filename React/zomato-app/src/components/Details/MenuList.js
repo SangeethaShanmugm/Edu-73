@@ -5,6 +5,7 @@ export default class MenuList extends Component {
   placeOrder = (id) => {
     this.orderId.push(id);
     this.props.finalOrder(this.orderId);
+    console.log(this.props.finalOrder);
   };
 
   removeOrder = (id) => {
